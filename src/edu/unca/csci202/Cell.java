@@ -12,7 +12,6 @@ public class Cell {
 	public Cell(char identity, boolean guess, boolean correct) {
 		
 		this.identity = identity;
-		identity = hyphen;
 		this.guess = guess;
 		this.correct = correct;
 	}

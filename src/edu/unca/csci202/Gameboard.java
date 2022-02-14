@@ -306,10 +306,11 @@ public class Gameboard {
 	
 	public void expand(int rowGuess, int columnGuess) {
 		
-		try {
-			for (int i = -1; i < 2; i++) {
-				for (int j = -1; j < 2; j++) {
-										
+		
+		for (int i = -1; i < 2; i++) {
+			for (int j = -1; j < 2; j++) {
+				
+				try {
 					if (board[rowGuess - i][columnGuess - j].identity == '0' && board[rowGuess - i][columnGuess - j].guess == false) {
 						
 						cellStack.push(board[rowGuess - i][columnGuess - j]);
@@ -318,11 +319,10 @@ public class Gameboard {
 						
 						board[rowGuess - i][columnGuess - j].guess = true;
 					}
+				} catch (ArrayIndexOutOfBoundsException e) {
+					
 				}
 			}
-		} catch (ArrayIndexOutOfBoundsException e) {
-			
 		}
-		
 	}
 }
