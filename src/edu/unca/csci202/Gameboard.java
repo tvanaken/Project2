@@ -30,7 +30,6 @@ public class Gameboard {
 	 * Calls for a new board to be generated and runs through the the necessary
 	 * methods to carry out a game of Minesweeper. Ends if the user's guess is
 	 * incorrect, or all mines are found and the user does not choose to play again.
-	 * 
 	 * @throws InvalidInputException if incorrect input is given by user.
 	 */
 	public void run() throws InvalidInputException{
